@@ -40,5 +40,12 @@ class Application
     end
   end
   
-  def handle_add(search_term)
+  def handle_add(item_term)
+    if @@items.include?(item_term)
+      @@cart << item_term
+      return "added #{item term}"
+    else
+      return "We don't have that item"
+    end
+  end
 end
